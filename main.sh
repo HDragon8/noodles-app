@@ -58,6 +58,10 @@ svn export https://github.com/Lienol/openwrt-package/trunk/luci-app-control-time
 svn export https://github.com/Lienol/openwrt-package/trunk/luci-app-control-webrestriction
 svn export https://github.com/Lienol/openwrt-package/trunk/luci-app-control-weburl
 svn export https://github.com/coolsnowwolf/lede/trunk/package/lean/mt
+svn export https://github.com/coolsnowwolf/lede/trunk/package/lean/vsftpd-alt
+svn export https://github.com/coolsnowwolf/lede/trunk/package/lean/upx
+svn export https://github.com/coolsnowwolf/lede/trunk/package/lean/shortcut-fe
+svn export https://github.com/coolsnowwolf/lede/trunk/package/lean/adbyby
 
 git_sparse_clone master "https://github.com/coolsnowwolf/luci" "leluci" applications/luci-app-accesscontrol applications/luci-app-adbyby-plus \
 applications/luci-app-airplay2 applications/luci-app-arpbind applications/luci-app-autoreboot \
