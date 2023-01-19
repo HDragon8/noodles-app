@@ -85,9 +85,8 @@ applications/luci-app-filebrowser applications/luci-app-fileassistant applicatio
 applications/luci-app-unblockneteasemusic-go applications/luci-app-unblockneteasemusic applications/luci-app-usb3disable applications/luci-app-cpulimit
 
 git_sparse_clone master "https://github.com/immortalwrt/immortalwrt" "immortal" package/kernel/rtl88x2bu \
-package/kernel/r8168 package/kernel/rtl8821cu package/kernel/rtl8189es \
-package/utils/mhz package/emortal
-mvdir emortal
+package/kernel/r8168 package/kernel/rtl8821cu package/kernel/rtl8189es package/utils/mhz  \
+package/emortal/autocore package/emortal/automount package/emortal/autosamba package/emortal/ipv6-helper
 
 git_sparse_clone master "https://github.com/immortalwrt/packages" "immpkgs" net/cdnspeedtest utils/filebrowser utils/cpulimit
 
