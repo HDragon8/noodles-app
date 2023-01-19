@@ -47,6 +47,7 @@ git_clone https://github.com/lisaac/luci-app-dockerman dockerman && mv -n docker
 git_clone https://github.com/vernesong/OpenClash && mv -n OpenClash/luci-app-openclash ./; rm -rf OpenClash
 git_clone https://github.com/frainzy1477/luci-app-clash
 git_clone https://github.com/Erope/openwrt_nezha nezha && mvdir nezha
+git_clone https://github.com/HDragon8/default-settings
 
 svn export https://github.com/fw876/helloworld/trunk/sagernet-core
 svn export https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus
