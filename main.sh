@@ -49,7 +49,7 @@ git_clone https://github.com/frainzy1477/luci-app-clash
 git_clone https://github.com/Erope/openwrt_nezha nezha && mvdir nezha
 git_clone https://github.com/HDragon8/default-settings
 
-svn export https://github.com/fw876/helloworld/trunk/sagernet-core
+svn export https://github.com/fw876/helloworld/trunk/v2raya
 svn export https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus
 svn export https://github.com/fw876/helloworld/trunk/lua-neturl
 svn export https://github.com/fw876/helloworld/trunk/redsocks2
