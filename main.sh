@@ -17,12 +17,14 @@ function mvdir() {
 mv -n `find $1/* -maxdepth 0 -type d` ./
 rm -rf $1
 }
+git_clone https://github.com/HDragon8/noodles-default-settings noodles-default-settings
 git_clone https://github.com/kiddin9/luci-theme-edge
 git_clone https://github.com/sbwml/openwrt-alist && mvdir openwrt-alist
 git_clone https://github.com/sirpdboy/luci-app-ddns-go ddns-go && mvdir ddns-go
 git_clone https://github.com/xiaorouji/openwrt-passwall && mvdir openwrt-passwall
 git_clone https://github.com/xiaorouji/openwrt-passwall2 passwall2 && mv -n passwall2/luci-app-passwall2 ./;rm -rf passwall2
 git clone --depth 1 -b luci https://github.com/xiaorouji/openwrt-passwall passwall && mv -n passwall/luci-app-passwall ./;rm -rf passwall
+git_clone https://github.com/fw876/helloworld && mvdir helloworld
 git_clone https://github.com/destan19/OpenAppFilter && mvdir OpenAppFilter
 git_clone https://github.com/linkease/nas-packages && mv -n nas-packages/{network/services/*,multimedia/*} ./; rm -rf nas-packages
 git_clone https://github.com/linkease/nas-packages-luci && mv -n nas-packages-luci/luci/* ./; rm -rf nas-packages-luci
@@ -48,7 +50,7 @@ git_clone https://github.com/vernesong/OpenClash && mv -n OpenClash/luci-app-ope
 git_clone https://github.com/frainzy1477/luci-app-clash
 git_clone https://github.com/Erope/openwrt_nezha nezha && mvdir nezha
 git_clone https://github.com/HDragon8/default-settings
-git_clone https://github.com/fw876/helloworld
+#git_clone https://github.com/fw876/helloworld
 
 #svn export https://github.com/fw876/helloworld/trunk/v2raya
 #svn export https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus
@@ -97,6 +99,8 @@ package/emortal/autocore package/emortal/automount package/emortal/autosamba pac
 
 git_sparse_clone master "https://github.com/immortalwrt/packages" "immpkgs" net/cdnspeedtest utils/filebrowser utils/cpulimit
 
+git_sparse_clone master "https://github.com/x-wrt/com.x-wrt" "x-wrt" natflow lua-ipops luci-app-macvlan
+
 mv -n openwrt-app-actions/applications/* ./;rm -rf openwrt-app-actions
 rm -Rf */.git
 
@@ -116,7 +120,7 @@ sed -i "/minisign:minisign/d" luci-app-dnscrypt-proxy2/Makefile
 #sed -i '$i /etc/init.d/dockerd restart &' luci-app-docker*/root/etc/uci-defaults/*
 sed -i 's/+libcap /+libcap +libcap-bin /' luci-app-openclash/Makefile
 sed -i 's/\(+luci-compat\)/\1 +luci-theme-argon/' luci-app-argon-config/Makefile
-#sed -i 's/\(+luci-compat\)/\1 +luci-theme-argonne/' luci-app-argonne-config/Makefile
+sed -i 's/\(+luci-compat\)/\1 +luci-theme-argonne/' luci-app-argonne-config/Makefile
 sed -i 's/ +uhttpd-mod-ubus//' luci-app-packet-capture/Makefile
 sed -i 's/	ip.neighbors/	luci.ip.neighbors/' luci-app-wifidog/luasrc/model/cbi/wifidog/wifidog_cfg.lua
 sed -i "s/nas/services/g" `grep nas -rl luci-app-fileassistant`
