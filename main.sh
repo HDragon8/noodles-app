@@ -81,7 +81,7 @@ applications/luci-app-vlmcsd applications/luci-app-vsftpd applications/luci-app-
 applications/luci-app-xlnetacc applications/luci-app-zerotier libs/luci-lib-fs
 
 git_sparse_clone master "https://github.com/coolsnowwolf/packages" "leanpkg" multimedia/UnblockNeteaseMusic-Go multimedia/UnblockNeteaseMusic \
-net/go-aliyundrive-webdav net/phtunnel net/uugamebooster net/verysync net/vlmcsd net/dnsforwarder net/pgyvpn
+net/go-aliyundrive-webdav net/phtunnel net/uugamebooster net/verysync net/vlmcsd net/dnsforwarder net/dnsproxy net/pgyvpn sound/owntone
 #git_sparse_clone master "https://github.com/coolsnowwolf/packages" "leanpkg" net/miniupnpd multimedia/UnblockNeteaseMusic-Go \
 #multimedia/UnblockNeteaseMusic net/amule net/antileech net/baidupcs-web net/frp multimedia/gmediarender net/go-aliyundrive-webdav \
 #net/qBittorrent-static net/qBittorrent net/transmission net/phtunnel libs/qtbase libs/qttools libs/rblibtorrent devel/go-rice \
