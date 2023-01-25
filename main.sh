@@ -49,8 +49,7 @@ git_clone https://github.com/lisaac/luci-app-dockerman dockerman && mv -n docker
 git_clone https://github.com/vernesong/OpenClash && mv -n OpenClash/luci-app-openclash ./; rm -rf OpenClash
 git_clone https://github.com/frainzy1477/luci-app-clash
 git_clone https://github.com/Erope/openwrt_nezha nezha && mvdir nezha
-git_clone https://github.com/HDragon8/default-settings
-#git_clone https://github.com/fw876/helloworld
+git_clone https://github.com/HDragon8/noodles-default-settings
 
 #svn export https://github.com/fw876/helloworld/trunk/v2raya
 #svn export https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus
@@ -120,7 +119,7 @@ sed -i "/minisign:minisign/d" luci-app-dnscrypt-proxy2/Makefile
 #sed -i '$i /etc/init.d/dockerd restart &' luci-app-docker*/root/etc/uci-defaults/*
 sed -i 's/+libcap /+libcap +libcap-bin /' luci-app-openclash/Makefile
 sed -i 's/\(+luci-compat\)/\1 +luci-theme-argon/' luci-app-argon-config/Makefile
-sed -i 's/\(+luci-compat\)/\1 +luci-theme-argonne/' luci-app-argonne-config/Makefile
+#sed -i 's/\(+luci-compat\)/\1 +luci-theme-argonne/' luci-app-argonne-config/Makefile
 sed -i 's/ +uhttpd-mod-ubus//' luci-app-packet-capture/Makefile
 sed -i 's/	ip.neighbors/	luci.ip.neighbors/' luci-app-wifidog/luasrc/model/cbi/wifidog/wifidog_cfg.lua
 sed -i "s/nas/services/g" `grep nas -rl luci-app-fileassistant`
