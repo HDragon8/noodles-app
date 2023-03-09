@@ -1,18 +1,14 @@
-# SPDX-License-Identifier: GPL-3.0-only
+# SPDX-License-Identifier: Apache-2.0
 #
-# Copyright (C) 2021-2022  sirpdboy  <herboy2008@gmail.com> https://github.com/sirpdboy/luci-app-ddns-go 
-# 
-# This is free software, licensed under the Apache License, Version 2.0 .
-#
+# Copyright (C) 2023 ImmortalWrt.org
+
 include $(TOPDIR)/rules.mk
 
-PKG_NAME:=luci-app-ddns-go
-PKG_VERSION:=1.2.0
-PKG_RELEASE:=7
-
-LUCI_TITLE:=LuCI Support for Dynamic ddns-go Client
-LUCI_DEPENDS:=+ddnsgo
+LUCI_TITLE:=LuCI support for DDNS-Go
+LUCI_DEPENDS:=+ddns-go
 LUCI_PKGARCH:=all
+
+PKG_MAINTAINER:=Tianling Shen <cnsztl@immortalwrt.org>
 
 include $(TOPDIR)/feeds/luci/luci.mk
 
